@@ -4,23 +4,23 @@ public class ClueManager : MonoBehaviour
 {
     // One bool for each clue
     // Index should be in order found
-    Clue[] cluesFound;
+    Clue[] clues;
 
-    public Clue[] CluesFound
+    public Clue[] Clues
     {
         get
         {
-            return cluesFound;
+            return clues;
         }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cluesFound = new Clue[7];
-        for (int i = 0; i < cluesFound.Length; i++)
+        clues = new Clue[8];
+        for (int i = 0; i < clues.Length; i++)
         {
-            cluesFound[i].Found = false;
+            clues[i].Found = false;
         }
     }
 
@@ -32,6 +32,6 @@ public class ClueManager : MonoBehaviour
 
     public void FindClue(int index)
     {
-        cluesFound[index].Found = true;
+        clues[index].Found = true;
     }
 }
