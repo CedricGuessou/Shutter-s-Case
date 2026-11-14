@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class Paper : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // Fields
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    [SerializeField] private GameObject bookCipher;
+    [SerializeField] private GameObject firstCode;
+
+    
+
+
 }

@@ -10,11 +10,13 @@ public class TypewriterPaper : AfterButtonPressed
     // The paper that appears on the screen
     [SerializeField] private GameObject paper;
 
-    private void Start()
-    {
+    
+    // Methods
 
-    }
-
+    /// <summary>
+    /// Override - Simple way to record the first time the button is pressed
+    /// and to do the actions after pressed.
+    /// </summary>
     public override void Pressed()
     {
         FirstTime();
