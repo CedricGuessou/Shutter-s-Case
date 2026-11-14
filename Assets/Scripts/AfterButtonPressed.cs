@@ -7,6 +7,9 @@ public abstract class AfterButtonPressed : MonoBehaviour
     // A way to check if the required clue is found
     [SerializeField] protected GameObject objectClue;
 
+    // A way to updated the clues and codes found
+    [SerializeField] protected ClueManager clueManager; 
+
     protected bool firstTime = false;
 
     // Methods
