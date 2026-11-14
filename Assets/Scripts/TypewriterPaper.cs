@@ -6,11 +6,13 @@ using UnityEngine.InputSystem;
 public class TypewriterPaper : AfterButtonPressed
 {
     // Fields
-    private Button typeWriter;
+
+    // The paper that appears on the screen
+    [SerializeField] private GameObject paper;
 
     private void Start()
     {
-        typeWriter = gameObject.GetComponent<Button>();
+
     }
 
     public override void Pressed()
@@ -18,6 +20,9 @@ public class TypewriterPaper : AfterButtonPressed
         FirstTime();
 
         Debug.Log("Typewriter pressed");
+
+        paper.transform.position = new Vector3(0, 0, 0);
+
     }
 
 }
