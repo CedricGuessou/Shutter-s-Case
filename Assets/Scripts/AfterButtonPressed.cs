@@ -9,11 +9,20 @@ public abstract class AfterButtonPressed : MonoBehaviour
     [SerializeField] protected GameObject objectClue;
 
     // A way to updated the clues and codes found
-    [SerializeField] protected ClueManager clueManager; 
+    [SerializeField] protected ClueManager clueManager;
+
+    protected Vertices vertices;
 
     protected bool firstTime = false;
 
+    protected bool photogenic;
+
     // Methods
+
+    public void Awake()
+    {
+         
+    }
 
     /// <summary>
     /// Abstract - Meant to be called in the children classes

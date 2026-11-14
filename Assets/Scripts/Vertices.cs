@@ -7,6 +7,7 @@ public class Vertices : MonoBehaviour
     /// </summary>
     public enum VerticesScene
     {
+        desk,
         letter,
         typewriter,
         book,

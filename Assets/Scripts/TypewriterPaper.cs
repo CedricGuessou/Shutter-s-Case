@@ -10,7 +10,8 @@ public class TypewriterPaper : AfterButtonPressed
     // The paper that appears on the screen
     [SerializeField] private GameObject paper;
 
-    
+    private Vertices vertices;
+
     // Methods
 
     /// <summary>
