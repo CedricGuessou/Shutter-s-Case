@@ -11,7 +11,7 @@ public class CameraLook : MonoBehaviour
         Vector3 cameraPos = transform.position;
 
         // Changes the position of the camera over time
-        cameraPos += (Vector3)lookMovement * 0.001f;
+        cameraPos += (Vector3)lookMovement * 0.005f;
 
         // Storing the new position
         transform.position = cameraPos;
