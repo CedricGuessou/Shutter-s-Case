@@ -1,21 +1,23 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class TypewriterPaper : AfterButtonPressed
 {
-    
+    // Fields
+    private Button typeWriter;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        typeWriter = gameObject.GetComponent<Button>();
     }
 
     public override void Pressed()
+    {
+        FirstTime();
+
+        Debug.Log("Typewriter pressed");
+    }
 
 }
