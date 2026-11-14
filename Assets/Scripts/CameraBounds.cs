@@ -34,7 +34,7 @@ public class CameraBounds : MouseBounds
             {
                 if (positive)
                 {
-                    parent.position = new Vector3(parent.position.x, parent.position.y + (float)0.1, 0);
+                    parent.position = new Vector3(parent.position.x, parent.position.y + (float)0.1, -10);
                 }
                 else
                 {
@@ -44,20 +44,5 @@ public class CameraBounds : MouseBounds
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<MouseBehavoir>(out MouseBehavoir mouse))
-        {
-            mouseIn = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<MouseBehavoir>(out MouseBehavoir mouse))
-        {
-            mouseIn = false;
-        }
-
-    }
+    
 }
