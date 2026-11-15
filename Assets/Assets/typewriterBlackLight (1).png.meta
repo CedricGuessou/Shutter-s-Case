@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 960323811a25a8944aa108738f39dbce
+guid: e47e3b9d5875f964a9b11cfd2e143543
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4103365719903786130
-    second: typewriterBlackLight_0
+      213: -1848546133256172416
+    second: typewriterBlackLight (1)_0
   - first:
-      213: -707782023704345101
-    second: typewriterBlackLight_1
+      213: 5431366509218628846
+    second: typewriterBlackLight (1)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: typewriterBlackLight_0
+      name: typewriterBlackLight (1)_0
       rect:
         serializedVersion: 2
         x: 3
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6bae994e9aed07c0800000000000000
-      internalID: -4103365719903786130
+      spriteID: 08c0858f515a856e0800000000000000
+      internalID: -1848546133256172416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: typewriterBlackLight_1
+      name: typewriterBlackLight (1)_1
       rect:
         serializedVersion: 2
         x: 53
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f502badff37d26f0800000000000000
-      internalID: -707782023704345101
+      spriteID: ee40ee24017106b40800000000000000
+      internalID: 5431366509218628846
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      typewriterBlackLight_0: -4103365719903786130
-      typewriterBlackLight_1: -707782023704345101
+      typewriterBlackLight (1)_0: -1848546133256172416
+      typewriterBlackLight (1)_1: 5431366509218628846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
