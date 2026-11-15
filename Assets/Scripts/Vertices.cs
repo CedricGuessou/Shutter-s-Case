@@ -24,4 +24,24 @@ public class Vertices : MonoBehaviour
         scCodeInput,
         finalPhoto
     }
+
+    protected VerticesScene currentScene;
+
+    private void Awake()
+    {
+        currentScene = VerticesScene.desk;
+    }
+
+    public VerticesScene CurrentScene
+    {
+        get
+        {
+            return currentScene;
+        }
+        set
+        {
+            currentScene = value;
+        }
+    }
+
 }

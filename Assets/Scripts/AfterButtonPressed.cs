@@ -11,7 +11,8 @@ public abstract class AfterButtonPressed : MonoBehaviour
     // A way to updated the clues and codes found
     [SerializeField] protected ClueManager clueManager;
 
-    protected Vertices vertices;
+    // A way to keep track of where the player is
+    [SerializeField] protected Vertices vertices;
 
     protected bool firstTime = false;
 

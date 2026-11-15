@@ -7,12 +7,15 @@ public class TypewriterPaper : AfterButtonPressed
 {
     [SerializeField]
     private GameObject typewriterOverlay;
+
     [SerializeField]
     private GameObject darkBackground;
 
     public override void Pressed()
     {
         FirstTime();
+
+        vertices.CurrentScene = Vertices.VerticesScene.typewriter;
 
         typewriterOverlay.SetActive(true);
         darkBackground.SetActive(true);
