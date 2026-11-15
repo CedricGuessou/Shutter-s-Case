@@ -61,4 +61,9 @@ public abstract class AfterButtonPressed : MonoBehaviour
         firstTime = true;
     }
 
+    public bool Scene(Vertices.VerticesScene target)
+    {
+        return vertices.CurrentScene == target;
+    }
+
 }

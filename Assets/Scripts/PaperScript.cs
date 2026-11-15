@@ -9,14 +9,14 @@ public class PaperScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        if (vertices.CurrentScene == Vertices.VerticesScene.typewriter)
+        if (Scene(Vertices.VerticesScene.desk))
         {
             FirstTime();
 
             vertices.CurrentScene = Vertices.VerticesScene.paper;
         }
         
-        if (vertices.CurrentScene == Vertices.VerticesScene.paper &&
+        if (Scene(Vertices.VerticesScene.paper) &&
             lens.lens == lensState.blacklight)
         {
             clueManager.CluesFound[0].Found = true;
