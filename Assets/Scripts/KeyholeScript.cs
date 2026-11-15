@@ -8,6 +8,8 @@ public class KeyholeScript : AfterButtonPressed
     private GameObject drawerKeypadButton;
     [SerializeField]
     private GameObject openKeyhole;
+    [SerializeField]
+    private GameObject closedKeypad;
 
     //Placeholder for the boolean of having the key clue
     public bool haveKey = false;
@@ -21,6 +23,8 @@ public class KeyholeScript : AfterButtonPressed
             openDrawerOverlay.SetActive(true);
             drawerKeypadButton.SetActive(true);
             openKeyhole.SetActive(true);
+            closedKeypad.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }

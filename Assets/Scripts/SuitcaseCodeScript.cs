@@ -4,6 +4,8 @@ public class SuitcaseCodeScript : AfterButtonPressed
 {
     [SerializeField]
     private GameObject openSuitcaseOverlay;
+    [SerializeField]
+    private GameObject imageButton;
 
     //Placeholder
     public bool haveFinalCode;
@@ -15,6 +17,7 @@ public class SuitcaseCodeScript : AfterButtonPressed
             FirstTime();
 
             openSuitcaseOverlay.SetActive(true);
+            imageButton.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }
