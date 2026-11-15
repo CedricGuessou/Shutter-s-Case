@@ -17,6 +17,28 @@ public abstract class AfterButtonPressed : MonoBehaviour
 
     protected bool photogenic;
 
+    protected bool pictureTaken;
+
+    public bool Photogenic
+    {
+        get
+        {
+            return photogenic;
+        }
+    }
+
+    public bool PictureTaken
+    {
+        get
+        {
+            return pictureTaken;
+        }
+        set
+        {
+            pictureTaken = value;
+        }
+    }
+
     // Methods
 
     public void Awake()

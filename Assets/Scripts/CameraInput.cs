@@ -5,17 +5,11 @@ using UnityEngine.InputSystem;
 
 public class CameraInput : MonoBehaviour
 {
-    public enum lensState
-    {
-        regular,
-        blacklight,
-        nightVision,
 
-    }
-
-    lensState lens;
+    Lenses.LensesType lens;
     Camera cam;
     float counter;
+    Mouse mouse;
     
     [SerializeField] TextObjects manager;
 
@@ -29,23 +23,28 @@ public class CameraInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouse = Mouse.current;
+
         counter += Time.deltaTime;
-        if (counter >= 0.25)
+        if (counter >= 0.125)
         {
-            counter = (float)0.25;
+            counter = (float)0.125;
         }
     }
 
     public void OnInteract()
     {
-        foreach (GameObject item in manager.Objects)
+        foreach (AfterButtonPressed item in manager.Objects)
         {
-            if ((item.transform.position - cam.transform.position).x <= cam.pixelHeight / 200
-                && (item.transform.position - cam.transform.position).x >= -cam.pixelHeight / 200
-                && (item.transform.position - cam.transform.position).y <= cam.pixelHeight / 200
-                && (item.transform.position - cam.transform.position).y >= -cam.pixelHeight / 200)  
+            if ((item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x <= cam.pixelHeight / 2000
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x >= -cam.pixelHeight / 2000
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y <= cam.pixelHeight / 2000
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y >= -cam.pixelHeight / 2000)  
             {
-
+                if (!item.PictureTaken && item.Photogenic)
+                {
+                    item.PictureTaken = true;
+                }
             }
         }
     }
@@ -54,20 +53,19 @@ public class CameraInput : MonoBehaviour
     {
         int stateChange = 0;
 
-        if (context.ReadValue<float>() > 0 && counter == 0.25)
+        if (context.ReadValue<float>() > 0 && counter == 0.125)
         {
             stateChange = 1;
-            counter = 0;
         }
-        else if (context.ReadValue<float>() < 0 && counter == 0.25)
+        else if (context.ReadValue<float>() < 0 && counter == 0.125)
         {
             stateChange = -1;
-            counter = 0;
         }
 
         if ((int)lens + stateChange >= 0 && (int)lens + stateChange <= 2)
         {
             lens = (lens + stateChange);
+            counter = 0;
         }
     }
 }
