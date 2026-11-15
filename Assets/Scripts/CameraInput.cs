@@ -65,16 +65,10 @@ public class CameraInput : MonoBehaviour
 
         if (context.ReadValue<float>() > 0 && counter == 0.125)
         {
-            nightVision.SetActive(true);
-            blackLight.SetActive(false);
-
             stateChange = 1;
         }
         else if (context.ReadValue<float>() < 0 && counter == 0.125)
         {
-            nightVision.SetActive(false);
-            blackLight.SetActive(true);
-
             stateChange = -1;
         }
 
@@ -82,6 +76,23 @@ public class CameraInput : MonoBehaviour
         {
             lens = (lens + stateChange);
             counter = 0;
+        }
+
+
+        if (lens == lensState.blacklight)
+        {
+            nightVision.SetActive(false);
+            blackLight.SetActive(true);
+        }
+        else if (lens == lensState.nightVision)
+        {
+            nightVision.SetActive(true);
+            blackLight.SetActive(false);
+        }
+        else
+        {
+            nightVision.SetActive(false);
+            blackLight.SetActive(false);
         }
     }
 }
