@@ -41,7 +41,7 @@ public class CameraLook : MonoBehaviour
         //}
 
 
-        cameraPos += (Vector3)lookMovement * 0.005f;
+        cameraPos += (Vector3)lookMovement * 0.01f;
 
         // Storing the new position
         transform.position = cameraPos;

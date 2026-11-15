@@ -3,15 +3,19 @@ using UnityEngine;
 public class SuitcaseCodeScript : AfterButtonPressed
 {
     [SerializeField]
-    private GameObject suitcaseCodeOverlay;
-    [SerializeField]
-    private GameObject darkBackground;
+    private GameObject openSuitcaseOverlay;
+
+    //Placeholder
+    public bool haveFinalCode;
 
     public override void Pressed()
     {
-        FirstTime();
+        if(haveFinalCode)
+        {
+            FirstTime();
 
-        suitcaseCodeOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            openSuitcaseOverlay.SetActive(true);
+            this.gameObject.SetActive(false);
+        }
     }
 }

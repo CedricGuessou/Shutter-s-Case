@@ -3,15 +3,21 @@ using UnityEngine;
 public class DrawerCodeScript : AfterButtonPressed
 {
     [SerializeField]
-    private GameObject drawerCodeOverlay;
+    private GameObject secretDrawerOverlay;
     [SerializeField]
-    private GameObject darkBackground;
+    private GameObject secretFileButton;
+
+    //Placeholder
+    public bool haveDrawerCode = false;
 
     public override void Pressed()
     {
-        FirstTime();
+        if(haveDrawerCode)
+        {
+            FirstTime();
 
-        drawerCodeOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            secretDrawerOverlay.SetActive(true);
+            secretFileButton.SetActive(true);
+        }
     }
 }

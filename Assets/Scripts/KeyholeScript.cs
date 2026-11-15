@@ -4,6 +4,10 @@ public class KeyholeScript : AfterButtonPressed
 {
     [SerializeField]
     private GameObject openDrawerOverlay;
+    [SerializeField]
+    private GameObject drawerKeypadButton;
+    [SerializeField]
+    private GameObject openKeyhole;
 
     //Placeholder for the boolean of having the key clue
     public bool haveKey = false;
@@ -15,7 +19,8 @@ public class KeyholeScript : AfterButtonPressed
             FirstTime();
 
             openDrawerOverlay.SetActive(true);
-            this.gameObject.SetActive(false);
+            drawerKeypadButton.SetActive(true);
+            openKeyhole.SetActive(true);
         }
     }
 }
