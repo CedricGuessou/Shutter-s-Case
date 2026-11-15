@@ -1,7 +1,9 @@
 using UnityEngine;
 
+
 public class Vertices : MonoBehaviour
 {
+
     /// <summary>
     /// Way to keep track what is on the screen
     /// </summary>
@@ -10,6 +12,7 @@ public class Vertices : MonoBehaviour
         desk,
         letter,
         typewriter,
+        paper,
         book,
         page,
         shelf,
@@ -25,13 +28,18 @@ public class Vertices : MonoBehaviour
         finalPhoto
     }
 
+    // Field
+
+    // keeping track of the current scene everytime
     protected VerticesScene currentScene;
 
+    // Start at the desk
     private void Awake()
     {
         currentScene = VerticesScene.desk;
     }
 
+    // Allows for other scripts to update the scene
     public VerticesScene CurrentScene
     {
         get
