@@ -9,9 +9,22 @@ public class SecretFileScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        FirstTime();
+        if (clueManager.SecretDrawer && Scene(Vertices.VerticesScene.desk))
+        {
+            FirstTime();
 
-        fileOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            vertices.CurrentScene = Vertices.VerticesScene.sdFolders;
+
+            fileOverlay.SetActive(true);
+            darkBackground.SetActive(true);
+
+            return;
+        }
+
+        if (Scene(Vertices.VerticesScene.sdFolders))
+        {
+            clueManager.FinalCode[2].Found = true;
+        }
+        
     }
 }

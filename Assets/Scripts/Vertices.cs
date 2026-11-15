@@ -21,7 +21,7 @@ public class Vertices : MonoBehaviour
         drawer,
         keyhole,
         folders,
-        codeInput,
+        dCodeInput,
         sdFolders,
         Suitcase,
         scCodeInput,

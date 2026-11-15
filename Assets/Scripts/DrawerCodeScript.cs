@@ -7,17 +7,24 @@ public class DrawerCodeScript : AfterButtonPressed
     [SerializeField]
     private GameObject secretFileButton;
 
-    //Placeholder
-    public bool haveDrawerCode = false;
 
     public override void Pressed()
     {
-        if(haveDrawerCode)
+        if (Scene(Vertices.VerticesScene.desk))
         {
             FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.dCodeInput;
 
             secretDrawerOverlay.SetActive(true);
             secretFileButton.SetActive(true);
         }
+
+        if (clueManager.CluesFound[2].Found && 
+            Scene(Vertices.VerticesScene.dCodeInput))
+        {
+            clueManager.SecretDrawer = true;
+        }
+
     }
 }

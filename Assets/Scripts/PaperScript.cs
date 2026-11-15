@@ -4,9 +4,6 @@ public class PaperScript : AfterButtonPressed
 {
     // Fields
 
-    // Keep track of the active lens
-    [SerializeField] private CameraInput lens;
-
     public override void Pressed()
     {
         if (Scene(Vertices.VerticesScene.desk))

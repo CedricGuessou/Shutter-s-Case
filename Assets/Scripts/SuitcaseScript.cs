@@ -9,10 +9,18 @@ public class SuitcaseScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        FirstTime();
+        if (Scene(Vertices.VerticesScene.desk))
+        {
+            FirstTime();
 
-        suitcaseOverlay.SetActive(true);
-        this.gameObject.SetActive(false);
-        openPulloutDrawer.SetActive(true);
+            vertices.CurrentScene = Vertices.VerticesScene.Suitcase;
+
+            suitcaseOverlay.SetActive(true);
+            this.gameObject.SetActive(false);
+            openPulloutDrawer.SetActive(true);
+        }
+
+
+        
     }
 }

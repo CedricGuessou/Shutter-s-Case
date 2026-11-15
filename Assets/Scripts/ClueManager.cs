@@ -9,6 +9,8 @@ public class ClueManager : MonoBehaviour
     // The final pieces of the code that need to be found to complete the game
     Clue[] finalCode;
 
+    private bool secretDrawer;
+
     public Clue[] CluesFound
     {
         get
@@ -22,6 +24,18 @@ public class ClueManager : MonoBehaviour
         get
         {
             return finalCode;
+        }
+    }
+
+    public bool SecretDrawer
+    {
+        get
+        {
+            return secretDrawer;
+        }
+        set
+        {
+            secretDrawer = value;
         }
     }
 
@@ -56,17 +70,18 @@ public class ClueManager : MonoBehaviour
     /// <summary>
     /// Tracks all 3 pieces of the code, once all three are found the game can be complete
     /// </summary>
-    public void CodeComplete()
+    public bool CodeComplete()
     {
         for (int i = 0; i < finalCode.Length; i++)
         {
             if (!finalCode[i].Found)
             {
-                return;
+                return false;
             }
         }
 
         // If all the codes are found, then the game is complete
         Debug.Log("Game Complete");
+        return true;
     }
 }
