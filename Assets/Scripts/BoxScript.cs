@@ -11,7 +11,7 @@ public class NewMonoBehaviourScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        if(cam.GetComponent<CameraInput>().lens == CameraInput.lensState.nightVision)
+        if(cam.GetComponent<CameraInput>().lens == lensState.nightVision)
         {
             FirstTime();
 

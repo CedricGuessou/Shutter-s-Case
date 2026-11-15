@@ -2,10 +2,17 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+public enum lensState
+{
+    regular,
+    blacklight,
+    nightVision,
 
+}
 public class CameraInput : MonoBehaviour
 {
-    Lenses.LensesType lens;
+    public lensState lens;
+
     Camera cam;
     float counter;
     Mouse mouse;
