@@ -15,12 +15,23 @@ public class PadlockScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        if(haveBoxCode)
+        if (haveBoxCode && Scene(Vertices.VerticesScene.box))
         {
             FirstTime();
 
+            vertices.CurrentScene = Vertices.VerticesScene.padlock;
+
             openBoxOverlay.SetActive(true);
             darkBackground.SetActive(true);
+
+            return;
         }
+
+        if (Scene(Vertices.VerticesScene.padlock) && clueManager.CluesFound[1].Found)
+        {
+            clueManager.CluesFound[2].Found = true;
+            clueManager.FinalCode[1].Found = true;
+        }
+
     }
 }

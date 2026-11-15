@@ -11,18 +11,24 @@ public class BoxScript: AfterButtonPressed
     [SerializeField]
     private Camera cam;
 
-    //Placeholder for lens logic
-    public bool isNightVision = false;
+    // Keep track of the active lens
+    [SerializeField] private CameraInput lens;
 
     public override void Pressed()
     {
-        if(isNightVision)
+        if (lens.lens == lensState.nightVision && 
+            Scene(Vertices.VerticesScene.desk))
         {
             FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.box;
 
             boxOverlay.SetActive(true);
             darkBackground.SetActive(true);
             padlockButton.SetActive(true);
+
+            return;
         }
+
     }
 }
