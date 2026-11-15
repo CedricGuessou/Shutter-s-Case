@@ -1,14 +1,29 @@
 using UnityEngine;
 
-public class PaperScript : MonoBehaviour
+public class PaperScript : AfterButtonPressed
 {
     // Fields
 
-    // Gameobject for the book cipher and first code
-    [SerializeField] private GameObject bookCipher;
-    [SerializeField] private GameObject firstCode;
+    // Keep track of the active lens
+    [SerializeField] private CameraInput lens;
 
-    
+    public override void Pressed()
+    {
+        if (Scene(Vertices.VerticesScene.desk))
+        {
+            FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.paper;
+        }
+        
+        if (Scene(Vertices.VerticesScene.paper) &&
+            lens.lens == lensState.blacklight)
+        {
+            clueManager.CluesFound[0].Found = true;
+            clueManager.FinalCode[0].Found = true;
+        }
+
+    }
 
 
 }

@@ -11,6 +11,7 @@ public class BookScript : AfterButtonPressed
     {
         FirstTime();
 
+        vertices.CurrentScene = Vertices.VerticesScene.book;
         bookOverlay.SetActive(true);
         darkBackground.SetActive(true);
     }

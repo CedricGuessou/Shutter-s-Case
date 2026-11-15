@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class OpenBookScript : AfterButtonPressed
+{
+    [SerializeField]
+    private GameObject bookOverlay;
+    [SerializeField]
+    private GameObject darkBackground;
+
+    public override void Pressed()
+    {
+        if (Scene(Vertices.VerticesScene.desk))
+        {
+            FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.page;
+            bookOverlay.SetActive(true);
+            darkBackground.SetActive(true);
+
+            return;
+        }
+
+        if (Scene(Vertices.VerticesScene.page) && clueManager.CluesFound[0].Found) 
+        {
+            clueManager.CluesFound[1].Found = true;
+        }
+        
+    }
+}
