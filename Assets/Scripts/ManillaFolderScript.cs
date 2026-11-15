@@ -7,6 +7,11 @@ public class ManillaFolderScript : AfterButtonPressed
     [SerializeField]
     private GameObject darkBackground;
 
+    private void Awake()
+    {
+        photogenic = true;
+    }
+
     public override void Pressed()
     {
         if (Scene(Vertices.VerticesScene.folders))

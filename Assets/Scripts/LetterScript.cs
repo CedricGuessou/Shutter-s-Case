@@ -8,6 +8,11 @@ public class LetterScript : AfterButtonPressed
     [SerializeField]
     private GameObject darkBackground;
 
+    private void Awake()
+    {
+        photogenic = true;
+    }
+
     public override void Pressed()
     {
         FirstTime();

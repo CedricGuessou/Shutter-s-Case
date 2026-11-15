@@ -45,11 +45,6 @@ public abstract class AfterButtonPressed : MonoBehaviour
 
     // Methods
 
-    public void Awake()
-    {
-         
-    }
-
     /// <summary>
     /// Abstract - Meant to be called in the children classes
     /// </summary>

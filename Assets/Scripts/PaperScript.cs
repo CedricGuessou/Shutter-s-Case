@@ -4,6 +4,11 @@ public class PaperScript : AfterButtonPressed
 {
     // Fields
 
+    private void Awake()
+    {
+        photogenic = true;
+    }
+
     public override void Pressed()
     {
         if (Scene(Vertices.VerticesScene.desk))
