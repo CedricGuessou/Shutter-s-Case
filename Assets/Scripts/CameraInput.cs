@@ -42,10 +42,10 @@ public class CameraInput : MonoBehaviour
     {
         foreach (AfterButtonPressed item in manager.Objects)
         {
-            if ((item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x <= cam.pixelHeight / 2000
-                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x >= -cam.pixelHeight / 2000
-                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y <= cam.pixelHeight / 2000
-                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y >= -cam.pixelHeight / 2000)  
+            if ((item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x <= cam.pixelWidth / 500
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).x >= -cam.pixelWidth / 500
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y <= cam.pixelHeight / 500
+                && (item.transform.position - Camera.main.ScreenToWorldPoint(mouse.position.value)).y >= -cam.pixelHeight / 500)  
             {
                 if (!item.PictureTaken && item.Photogenic)
                 {

@@ -17,7 +17,14 @@ public class InteractiveObjectManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        objectsToClick = GameObject.FindObjectsByType<AfterButtonPressed>(FindObjectsSortMode.InstanceID).ToList<AfterButtonPressed>();
+        objectsToClick = new List<AfterButtonPressed>();
+
+        List<GameObject> interactables = GameObject.FindGameObjectsWithTag("Interactable").ToList();
+
+        foreach (GameObject item in interactables)
+        {
+            objectsToClick.Add(item.GetComponent<AfterButtonPressed>());
+        }
     }
 
     // Update is called once per frame

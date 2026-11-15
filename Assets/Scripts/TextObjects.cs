@@ -22,6 +22,13 @@ public class TextObjects : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         objects = objectManager.ObjectsToClick;
 
         List<AfterButtonPressed> remove = new List<AfterButtonPressed>();
@@ -38,12 +45,5 @@ public class TextObjects : MonoBehaviour
         {
             objects.Remove(item);
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
