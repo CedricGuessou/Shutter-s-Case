@@ -9,6 +9,8 @@ public class ClueManager : MonoBehaviour
     // The final pieces of the code that need to be found to complete the game
     Clue[] finalCode;
 
+    private bool secretDrawer;
+
     public Clue[] CluesFound
     {
         get
@@ -22,6 +24,18 @@ public class ClueManager : MonoBehaviour
         get
         {
             return finalCode;
+        }
+    }
+
+    public bool SecretDrawer
+    {
+        get
+        {
+            return secretDrawer;
+        }
+        set
+        {
+            secretDrawer = value;
         }
     }
 

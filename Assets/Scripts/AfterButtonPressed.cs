@@ -14,6 +14,9 @@ public abstract class AfterButtonPressed : MonoBehaviour
     // A way to keep track of where the player is
     [SerializeField] protected Vertices vertices;
 
+    // Keep track of the active lens
+    [SerializeField] protected CameraInput lens;
+
     protected bool firstTime = false;
 
     protected bool photogenic;

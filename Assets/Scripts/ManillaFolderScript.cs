@@ -9,9 +9,18 @@ public class ManillaFolderScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        FirstTime();
+        if (Scene(Vertices.VerticesScene.folders))
+        {
+            FirstTime();
 
-        folderOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            folderOverlay.SetActive(true);
+            darkBackground.SetActive(true);
+        }
+
+        if (lens.lens == lensState.blacklight)
+        {
+            clueManager.CluesFound[3].Found = true;
+        }
+        
     }
 }

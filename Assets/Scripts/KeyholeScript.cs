@@ -11,20 +11,28 @@ public class KeyholeScript : AfterButtonPressed
     [SerializeField]
     private GameObject closedKeypad;
 
-    //Placeholder for the boolean of having the key clue
-    public bool haveKey = false;
 
     public override void Pressed()
     {
-        if(haveKey)
+        if (Scene(Vertices.VerticesScene.desk))
         {
             FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.keyhole;
 
             openDrawerOverlay.SetActive(true);
             drawerKeypadButton.SetActive(true);
             openKeyhole.SetActive(true);
             closedKeypad.SetActive(false);
             this.gameObject.SetActive(false);
+
+            return;
+        }
+
+        if (clueManager.CluesFound[2].Found && 
+            Scene(Vertices.VerticesScene.keyhole))
+        {
+            vertices.CurrentScene = Vertices.VerticesScene.folders;
         }
     }
 }

@@ -11,9 +11,6 @@ public class BoxScript: AfterButtonPressed
     [SerializeField]
     private Camera cam;
 
-    // Keep track of the active lens
-    [SerializeField] private CameraInput lens;
-
     public override void Pressed()
     {
         if (lens.lens == lensState.nightVision && 
