@@ -9,9 +9,12 @@ public class LocationImageScript : AfterButtonPressed
 
     public override void Pressed()
     {
-        FirstTime();
+        if (Scene(Vertices.VerticesScene.finalPhoto))
+        {
+            FirstTime();
 
-        pictureOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            pictureOverlay.SetActive(true);
+            darkBackground.SetActive(true);
+        }
     }
 }

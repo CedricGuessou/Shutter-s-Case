@@ -7,18 +7,27 @@ public class SuitcaseCodeScript : AfterButtonPressed
     [SerializeField]
     private GameObject imageButton;
 
-    //Placeholder
-    public bool haveFinalCode;
 
     public override void Pressed()
     {
-        if(haveFinalCode)
+        if (Scene(Vertices.VerticesScene.Suitcase))
         {
             FirstTime();
+
+            vertices.CurrentScene = Vertices.VerticesScene.scCodeInput;
 
             openSuitcaseOverlay.SetActive(true);
             imageButton.SetActive(true);
             this.gameObject.SetActive(false);
+
+            return;
+        }
+
+
+        if (clueManager.CodeComplete() && 
+            Scene(Vertices.VerticesScene.scCodeInput))
+        {
+            vertices.CurrentScene = Vertices.VerticesScene.finalPhoto;
         }
     }
 }
