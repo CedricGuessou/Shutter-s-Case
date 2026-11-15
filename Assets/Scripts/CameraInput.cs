@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class CameraInput : MonoBehaviour
 {
-
     Lenses.LensesType lens;
     Camera cam;
     float counter;
