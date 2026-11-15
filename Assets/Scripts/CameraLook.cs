@@ -22,23 +22,26 @@ public class CameraLook : MonoBehaviour
 
 
         // Checking if the camera is within the bounds of the background
-        if ((cameraPos - background.transform.position).x + cam.pixelWidth/200 >= background.transform.localScale.x / 2)
-        {
-            cameraPos = new Vector3(background.transform.localScale.x / 2 - cam.pixelWidth / 200, cameraPos.y);
-        }
-        else if ((cameraPos - background.transform.position).x - cam.pixelWidth / 200 <= -background.transform.localScale.x / 2)
-        {
-            cameraPos = new Vector3(-background.transform.localScale.x / 2 + cam.pixelWidth / 200, cameraPos.y);
-        }
+        //if ((cameraPos - background.transform.position).x + cam.pixelWidth/200 >= background.transform.localScale.x / 2)
+        //{
+        //    cameraPos = new Vector3(background.transform.localScale.x / 2 - cam.pixelWidth / 200, cameraPos.y);
+        //}
+        //else if ((cameraPos - background.transform.position).x - cam.pixelWidth / 200 <= -background.transform.localScale.x / 2)
+        //{
+        //    cameraPos = new Vector3(-background.transform.localScale.x / 2 + cam.pixelWidth / 200, cameraPos.y);
+        //}
+        //
+        //if ((cameraPos - background.transform.position).y + cam.pixelHeight / 200 >= background.transform.localScale.y / 2)
+        //{
+        //    cameraPos = new Vector3(cameraPos.x, background.transform.localScale.y / 2 - cam.pixelHeight / 200);
+        //}
+        //else if ((cameraPos - background.transform.position).y - cam.pixelHeight / 200 <= -background.transform.localScale.y / 2)
+        //{
+        //    cameraPos = new Vector3(cameraPos.x, background.transform.localScale.y / 2 + cam.pixelHeight / 200);
+        //}
 
-        if ((cameraPos - background.transform.position).y + cam.pixelHeight / 200 >= background.transform.localScale.y / 2)
-        {
-            cameraPos = new Vector3(cameraPos.x, background.transform.localScale.y / 2 - cam.pixelHeight / 200);
-        }
-        else if ((cameraPos - background.transform.position).y - cam.pixelHeight / 200 <= -background.transform.localScale.y / 2)
-        {
-            cameraPos = new Vector3(cameraPos.x, background.transform.localScale.y / 2 + cam.pixelHeight / 200);
-        }
+
+        cameraPos += (Vector3)lookMovement * 0.005f;
 
         // Storing the new position
         transform.position = cameraPos;

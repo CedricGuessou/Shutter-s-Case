@@ -1,22 +1,28 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : AfterButtonPressed
+public class BoxScript: AfterButtonPressed
 {
     [SerializeField]
     private GameObject boxOverlay;
+    [SerializeField]
+    private GameObject padlockButton;
     [SerializeField]
     private GameObject darkBackground;
     [SerializeField]
     private Camera cam;
 
+    //Placeholder for lens logic
+    public bool isNightVision = false;
+
     public override void Pressed()
     {
-        if(cam.GetComponent<CameraInput>().lens == lensState.nightVision)
+        if(isNightVision)
         {
             FirstTime();
 
             boxOverlay.SetActive(true);
             darkBackground.SetActive(true);
+            padlockButton.SetActive(true);
         }
     }
 }

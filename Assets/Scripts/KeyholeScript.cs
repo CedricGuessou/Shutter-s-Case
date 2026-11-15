@@ -3,15 +3,19 @@ using UnityEngine;
 public class KeyholeScript : AfterButtonPressed
 {
     [SerializeField]
-    private GameObject keyholeOverlay;
-    [SerializeField]
-    private GameObject darkBackground;
+    private GameObject openDrawerOverlay;
+
+    //Placeholder for the boolean of having the key clue
+    public bool haveKey = false;
 
     public override void Pressed()
     {
-        FirstTime();
+        if(haveKey)
+        {
+            FirstTime();
 
-        keyholeOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+            openDrawerOverlay.SetActive(true);
+            this.gameObject.SetActive(false);
+        }
     }
 }
