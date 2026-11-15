@@ -683,6 +683,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   suitcaseOverlay: {fileID: 897464674}
   openPulloutDrawer: {fileID: 1883736364}
 --- !u!1 &272278027
@@ -739,6 +741,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   frameOverlay: {fileID: 418338771}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &272278030
@@ -1270,6 +1274,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   typewriterOverlay: {fileID: 1695515797}
   darkBackground: {fileID: 1079280177}
 --- !u!1 &649235003
@@ -1417,6 +1423,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   folderOverlay: {fileID: 1103591192}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &663018365
@@ -1567,9 +1575,10 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   secretDrawerOverlay: {fileID: 947372812}
   secretFileButton: {fileID: 1155680163}
-  haveDrawerCode: 1
 --- !u!114 &702666695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,6 +1920,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   pictureOverlay: {fileID: 67571879}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &866605876
@@ -2061,9 +2072,10 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   openSuitcaseOverlay: {fileID: 220169779}
   imageButton: {fileID: 866605873}
-  haveFinalCode: 0
 --- !u!114 &897464677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,11 +2224,12 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   openDrawerOverlay: {fileID: 663018362}
   drawerKeypadButton: {fileID: 702666692}
   openKeyhole: {fileID: 1657555646}
   closedKeypad: {fileID: 313080662}
-  haveKey: 1
 --- !u!114 &923098645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2922,6 +2935,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   fileOverlay: {fileID: 1560861793}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &1155680166
@@ -3277,6 +3292,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   openBoxOverlay: {fileID: 170847929}
   darkBackground: {fileID: 1079280177}
   haveBoxCode: 1
@@ -3864,11 +3881,12 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   boxOverlay: {fileID: 1257267824}
   padlockButton: {fileID: 1250085531}
   darkBackground: {fileID: 1079280177}
   cam: {fileID: 2093423754}
-  lens: {fileID: 0}
 --- !u!114 &1425572037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4096,6 +4114,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   bookOverlay: {fileID: 1755321922}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &1437939029
@@ -4792,6 +4812,8 @@ MonoBehaviour:
   objectClue: {fileID: 0}
   clueManager: {fileID: 0}
   vertices: {fileID: 0}
+  lens: {fileID: 0}
+  photogenic: 0
   letterOverlay: {fileID: 1412768080}
   darkBackground: {fileID: 1079280177}
 --- !u!114 &2031544081
@@ -5223,7 +5245,19 @@ MonoBehaviour:
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2093423760}
+        m_TargetAssemblyTypeName: CameraInput, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e,/Mouse/rightButton]'
   - m_PersistentCalls:
@@ -5247,7 +5281,19 @@ MonoBehaviour:
     m_ActionId: 641cd816-40e6-41b4-8c3d-04687c349290
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2093423760}
+        m_TargetAssemblyTypeName: CameraInput, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6813507a-4657-4483-bfd4-7b7478ddd3ca
     m_ActionName: 'Player/Select[/Mouse/scroll/down,/Mouse/scroll/up]'
   - m_PersistentCalls:
@@ -5279,19 +5325,7 @@ MonoBehaviour:
     m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
     m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2093423760}
-        m_TargetAssemblyTypeName: CameraInput, Assembly-CSharp
-        m_MethodName: OnSelect
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
     m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
   - m_PersistentCalls:
