@@ -13,6 +13,10 @@ public class CameraInput : MonoBehaviour
 {
     public lensState lens;
 
+    // References to the "shaders"
+    [SerializeField] GameObject nightVision;
+    [SerializeField] GameObject blackLight;
+
     Camera cam;
     float counter;
     Mouse mouse;
@@ -61,10 +65,16 @@ public class CameraInput : MonoBehaviour
 
         if (context.ReadValue<float>() > 0 && counter == 0.125)
         {
+            nightVision.SetActive(true);
+            blackLight.SetActive(false);
+
             stateChange = 1;
         }
         else if (context.ReadValue<float>() < 0 && counter == 0.125)
         {
+            nightVision.SetActive(false);
+            blackLight.SetActive(true);
+
             stateChange = -1;
         }
 
