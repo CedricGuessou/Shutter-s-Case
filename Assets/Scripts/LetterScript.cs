@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LetterScript : AfterButtonPressed
 {
@@ -17,7 +18,7 @@ public class LetterScript : AfterButtonPressed
     {
         FirstTime();
         
-        letterOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+        letterOverlay.GetComponent<SpriteRenderer>().enabled = true;
+        darkBackground.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

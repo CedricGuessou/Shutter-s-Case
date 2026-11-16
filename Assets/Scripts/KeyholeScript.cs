@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyholeScript : AfterButtonPressed
 {
@@ -20,11 +21,11 @@ public class KeyholeScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.keyhole;
 
-            openDrawerOverlay.SetActive(true);
-            drawerKeypadButton.SetActive(true);
-            openKeyhole.SetActive(true);
-            closedKeypad.SetActive(false);
-            this.gameObject.SetActive(false);
+            openDrawerOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            drawerKeypadButton.GetComponent<Image>().enabled = true;
+            openKeyhole.GetComponent<SpriteRenderer>().enabled = true;
+            closedKeypad.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<Image>().enabled = false;
 
             return;
         }

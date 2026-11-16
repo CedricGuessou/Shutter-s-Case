@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LocationImageScript : AfterButtonPressed
 {
@@ -13,8 +14,8 @@ public class LocationImageScript : AfterButtonPressed
         {
             FirstTime();
 
-            pictureOverlay.SetActive(true);
-            darkBackground.SetActive(true);
+            pictureOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            darkBackground.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

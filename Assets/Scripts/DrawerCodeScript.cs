@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawerCodeScript : AfterButtonPressed
 {
@@ -16,8 +17,8 @@ public class DrawerCodeScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.dCodeInput;
 
-            secretDrawerOverlay.SetActive(true);
-            secretFileButton.SetActive(true);
+            secretDrawerOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            secretFileButton.GetComponent<Image>().enabled = true;
         }
 
         if (clueManager.CluesFound[2].Found && 

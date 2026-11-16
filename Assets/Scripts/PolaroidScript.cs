@@ -32,7 +32,7 @@ public class PolaroidScript : MonoBehaviour
     {
         //if (overlay.GetComponent<AfterButtonPressed>().PictureTaken)
         //{
-        //    this.gameObject.SetActive(true);
+        //    this.gameObject.GetComponent<Image>().enabled = true;
         //}
     }
 
@@ -69,10 +69,10 @@ public class PolaroidScript : MonoBehaviour
                     }
                     //if(otherButtons[i].GetComponent<PolaroidScript>().Overlay.GetComponent<AfterButtonPressed>().PictureTaken)
                     //{
-                    //    otherButtons[i].SetActive(true);
+                    //    otherButtons[i].GetComponent<Image>().enabled = true;
                     //}
-                
-                    if(turnOn)
+
+                    if (turnOn)
                     {
                         otherButtons[i].GetComponent<Image>().enabled = true;
                     }

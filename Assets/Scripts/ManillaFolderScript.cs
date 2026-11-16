@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManillaFolderScript : AfterButtonPressed
 {
@@ -18,8 +19,9 @@ public class ManillaFolderScript : AfterButtonPressed
         {
             FirstTime();
 
-            folderOverlay.SetActive(true);
-            darkBackground.SetActive(true);
+            folderOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            folderOverlay.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            darkBackground.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         if (lens.lens == lensState.blacklight)

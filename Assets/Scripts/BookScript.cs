@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BookScript : AfterButtonPressed
 {
@@ -12,7 +13,7 @@ public class BookScript : AfterButtonPressed
         FirstTime();
 
         vertices.CurrentScene = Vertices.VerticesScene.book;
-        bookOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+        bookOverlay.GetComponent<SpriteRenderer>().enabled = true;
+        darkBackground.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

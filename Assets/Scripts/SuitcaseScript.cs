@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SuitcaseScript : AfterButtonPressed
 {
@@ -15,9 +16,9 @@ public class SuitcaseScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.Suitcase;
 
-            suitcaseOverlay.SetActive(true);
-            this.gameObject.SetActive(false);
-            openPulloutDrawer.SetActive(true);
+            suitcaseOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            this.gameObject.GetComponent<Image>().enabled = false;
+            openPulloutDrawer.GetComponent<SpriteRenderer>().enabled = true;
         }
 
 

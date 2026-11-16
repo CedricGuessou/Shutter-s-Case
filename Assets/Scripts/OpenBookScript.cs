@@ -19,8 +19,8 @@ public class OpenBookScript : AfterButtonPressed
             FirstTime();
 
             vertices.CurrentScene = Vertices.VerticesScene.page;
-            bookOverlay.SetActive(true);
-            darkBackground.SetActive(true);
+            bookOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            darkBackground.GetComponent<SpriteRenderer>().enabled = true;
 
             return;
         }

@@ -15,7 +15,7 @@ public class InteractiveObjectManager : MonoBehaviour
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         objectsToClick = new List<AfterButtonPressed>();
 
@@ -24,6 +24,7 @@ public class InteractiveObjectManager : MonoBehaviour
         foreach (GameObject item in interactables)
         {
             objectsToClick.Add(item.GetComponent<AfterButtonPressed>());
+            Debug.Log(item.GetComponent<AfterButtonPressed>());
         }
     }
 

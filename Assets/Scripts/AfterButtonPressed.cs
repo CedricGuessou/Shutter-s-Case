@@ -19,7 +19,7 @@ public abstract class AfterButtonPressed : MonoBehaviour
 
     protected bool firstTime = false;
 
-    [SerializeField] protected bool photogenic;
+    [SerializeField] protected bool photogenic = false;
 
     protected bool pictureTaken;
 

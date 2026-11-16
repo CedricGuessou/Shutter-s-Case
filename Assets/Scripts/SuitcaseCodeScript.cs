@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SuitcaseCodeScript : AfterButtonPressed
 {
@@ -16,9 +17,9 @@ public class SuitcaseCodeScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.scCodeInput;
 
-            openSuitcaseOverlay.SetActive(true);
-            imageButton.SetActive(true);
-            this.gameObject.SetActive(false);
+            openSuitcaseOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            imageButton.GetComponent<Image>().enabled = true;
+            this.gameObject.GetComponent<Image>().enabled = false;
 
             return;
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PulloutDrawerClosedScript : AfterButtonPressed
 {
@@ -9,7 +10,7 @@ public class PulloutDrawerClosedScript : AfterButtonPressed
     {
         FirstTime();
 
-        openPulloutDrawerOverlay.SetActive(true);
-        this.gameObject.SetActive(false);
+        openPulloutDrawerOverlay.GetComponent<SpriteRenderer>().enabled = true;
+        this.gameObject.GetComponent<Image>().enabled = false;
     }
 }

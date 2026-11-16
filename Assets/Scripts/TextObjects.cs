@@ -22,23 +22,26 @@ public class TextObjects : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        objects = objectManager.ObjectsToClick;
+        Debug.Log(objects.Count);
 
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        objects = objectManager.ObjectsToClick;
 
         List<AfterButtonPressed> remove = new List<AfterButtonPressed>();
 
         foreach (AfterButtonPressed item in objects)
         {
-            if (!item.Photogenic)
-            {
-                remove.Add(item);
-            }
+            Debug.Log(item);
+            Debug.Log(item.Photogenic);
+            
+            //if (!item.Photogenic)
+            //{
+            //    remove.Add(item);
+            //}
         }
 
         foreach (AfterButtonPressed item in remove)

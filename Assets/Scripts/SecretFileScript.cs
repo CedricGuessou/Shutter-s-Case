@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SecretFileScript : AfterButtonPressed
 {
@@ -15,8 +16,8 @@ public class SecretFileScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.sdFolders;
 
-            fileOverlay.SetActive(true);
-            darkBackground.SetActive(true);
+            fileOverlay.GetComponent<SpriteRenderer>().enabled = true;
+            darkBackground.GetComponent<SpriteRenderer>().enabled = true;
 
             return;
         }

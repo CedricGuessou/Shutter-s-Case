@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GalleryButtonScript : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GalleryButtonScript : MonoBehaviour
 
     public void Press()
     {
-        background.SetActive(!background.activeSelf);
-        pictures.SetActive(!pictures.activeSelf);
+        background.GetComponent<SpriteRenderer>().enabled = !(background.GetComponent<SpriteRenderer>().enabled);
+        pictures.GetComponent<SpriteRenderer>().enabled = !(pictures.GetComponent<SpriteRenderer>().enabled);
     }
 }

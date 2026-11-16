@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ClickOff : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class ClickOff : MonoBehaviour
             if (this.gameObject.activeInHierarchy)
             {
                 vertex.CurrentScene = Vertices.VerticesScene.desk;
-                this.gameObject.SetActive(false);
+                this.gameObject.GetComponent<Image>().enabled = false;
             }
         }
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PictureFrameScript : AfterButtonPressed
 {
@@ -11,7 +12,7 @@ public class PictureFrameScript : AfterButtonPressed
     {
         FirstTime();
 
-        frameOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+        frameOverlay.GetComponent<SpriteRenderer>().enabled = true;
+        darkBackground.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

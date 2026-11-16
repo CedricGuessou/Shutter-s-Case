@@ -17,8 +17,8 @@ public class TypewriterPaper : AfterButtonPressed
 
         vertices.CurrentScene = Vertices.VerticesScene.typewriter;
 
-        typewriterOverlay.SetActive(true);
-        darkBackground.SetActive(true);
+        typewriterOverlay.GetComponent<SpriteRenderer>().enabled = true;
+        darkBackground.GetComponent<SpriteRenderer>().enabled = true;
     }
 
 }

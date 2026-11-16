@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PadlockScript : AfterButtonPressed
 {
@@ -21,8 +22,8 @@ public class PadlockScript : AfterButtonPressed
 
             vertices.CurrentScene = Vertices.VerticesScene.padlock;
 
-            openBoxOverlay.SetActive(true);
-            darkBackground.SetActive(true);
+            openBoxOverlay.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            darkBackground.GetComponent<SpriteRenderer>().enabled = true;
 
             return;
         }
